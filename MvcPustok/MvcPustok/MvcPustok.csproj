@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <Compile Remove="Areas\Manage\Models\**" />
+    <Content Remove="Areas\Manage\Models\**" />
+    <EmbeddedResource Remove="Areas\Manage\Models\**" />
+    <None Remove="Areas\Manage\Models\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Data\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Services\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\Manage\" />
+    <None Remove="Areas\Manage\Controllers\" />
+    <None Remove="Areas\Manage\Models\" />
+    <None Remove="Areas\Manage\Views\" />
+    <None Remove="Areas\Manage\Views\Shared\" />
+    <None Remove="Areas\Manage\ViewModels\" />
+    <None Remove="Areas\Manage\Views\Genre\" />
+    <None Remove="Areas\Manage\Views\Author\" />
+    <None Remove="Areas\Manage\Views\Slider\" />
+    <None Remove="Areas\Manage\Views\Book\" />
+    <None Remove="Helpers\" />
+    <None Remove="Areas\Manage\Views\Error\" />
+    <None Remove="Attributes\" />
+    <None Remove="Attributes\ValidationAttributes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Services\" />
+    <Folder Include="wwwroot\manage\assets\vendor\" />
+    <Folder Include="Areas\Manage\Views\Genre\" />
+    <Folder Include="Areas\Manage\Views\Slider\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="wwwroot\uploads\slider\" />
+    <Folder Include="Areas\Manage\Views\Error\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Attributes\ValidationAttributes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\manage\" />
+    <Content Remove="wwwroot\manage\assets\" />
+    <Content Remove="wwwroot\manage\assets\vendor\" />
+    <Content Remove="wwwroot\uploads\" />
+    <Content Remove="wwwroot\uploads\slider\" />
+    <Content Remove="wwwroot\uploads\book\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>

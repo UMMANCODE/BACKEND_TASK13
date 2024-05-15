@@ -1,0 +1,105 @@
+﻿<Properties StartupConfiguration="{838B4C8E-E59C-4E24-B508-A0358A019A2B}|https">
+  <MonoDevelop.Ide.ItemProperties.MvcPustok PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvcPustok/Areas/Manage/Controllers/BookController.cs">
+    <Files>
+      <File FileName="MvcPustok/Program.cs" />
+      <File FileName="MvcPustok/appsettings.json" />
+      <File FileName="MvcPustok/Views/_ViewImports.cshtml" />
+      <File FileName="MvcPustok/Views/_ViewStart.cshtml" />
+      <File FileName="MvcPustok/Views/Home/Index.cshtml" />
+      <File FileName="MvcPustok/Controllers/HomeController.cs" />
+      <File FileName="MvcPustok/Properties/launchSettings.json" />
+      <File FileName="MvcPustok/Models/BookTags.cs" />
+      <File FileName="MvcPustok/Models/BookImages.cs" />
+      <File FileName="MvcPustok/Data/AppDbContext.cs" />
+      <File FileName="MvcPustok/Views/Shared/_Layout.cshtml" />
+      <File FileName="MvcPustok/Models/Author.cs" />
+      <File FileName="MvcPustok/Models/Book.cs" />
+      <File FileName="MvcPustok/Models/Genre.cs" />
+      <File FileName="MvcPustok/Models/Slider.cs" Line="31" Column="1" />
+      <File FileName="MvcPustok/Models/Tag.cs" />
+      <File FileName="MvcPustok/Models/BaseEntity.cs" />
+      <File FileName="MvcPustok/ViewModels/HomeViewModel.cs" />
+      <File FileName="MvcPustok/Models/Feature.cs" />
+      <File FileName="MvcPustok/Views/Shared/_BookTabContentPartial.cshtml" />
+      <File FileName="MvcPustok/wwwroot/js/main.js" />
+      <File FileName="MvcPustok/Controllers/BookController.cs" />
+      <File FileName="MvcPustok/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="MvcPustok/Services/LayoutService.cs" />
+      <File FileName="MvcPustok/Models/Setting.cs" />
+      <File FileName="MvcPustok/wwwroot/js/ajax-mail.js" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/DashboardController.cs" Line="1" Column="1" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Shared/_Layout.cshtml" Line="29" Column="38" />
+      <File FileName="MvcPustok/Areas/Manage/Views/_ViewStart.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Views/_ViewImports.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/ViewModels/PaginatedList.cs" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/GenreController.cs" Line="53" Column="77" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Genre/Index.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Genre/Create.cshtml" />
+      <File FileName="MvcPustok/Pages/_ValidationScriptsPartial.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/AuthorController.cs" Line="26" Column="27" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Author/Index.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Author/Create.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/SliderController.cs" Line="31" Column="10" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Slider/Index.cshtml" Line="93" Column="2" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Slider/Create.cshtml" Line="60" Column="11" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/BookController.cs" Line="35" Column="10" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Book/Index.cshtml" Line="17" Column="22" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Dashboard/Index.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Genre/Edit.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Slider/Edit.cshtml" Line="66" Column="2" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Shared/_ValidationScriptPartials.cshtml" Line="1" Column="1" />
+      <File FileName="MvcPustok/Helpers/FileManager.cs" />
+      <File FileName="MvcPustok/Models/AuditEntity.cs" Line="9" Column="6" />
+      <File FileName="MvcPustok/Migrations/20240430034300_AlterSliderTable.cs" />
+      <File FileName="MvcPustok/wwwroot/manage/assets/js/delete.js" Line="19" Column="12" />
+      <File FileName="MvcPustok/Views/Shared/_BookModalPartial.cshtml" />
+      <File FileName="MvcPustok/Areas/Manage/Controllers/ErrorController.cs" Line="16" Column="1" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Error/NotFound.cshtml" Line="20" Column="27" />
+      <File FileName="MvcPustok/Attributes/ValidationAttributes/MaxSize.cs" Line="17" Column="32" />
+      <File FileName="MvcPustok/Attributes/ValidationAttributes/AllowedFileTypes.cs" Line="13" Column="1" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Book/Edit.cshtml" Line="84" Column="23" />
+      <File FileName="MvcPustok/Areas/Manage/Views/Book/Create.cshtml" Line="16" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MvcPustok">
+            <Node name="MvcPustok">
+              <Node name="Areas">
+                <Node name="Manage">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="BookController.cs" selected="True" />
+                  </Node>
+                  <Node name="Models" expanded="True" />
+                  <Node name="Views">
+                    <Node name="Error" expanded="True" />
+                    <Node name="Shared" expanded="True" />
+                    <Node name="Slider" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Attributes" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="wwwroot">
+                <Node name="image" expanded="True" />
+                <Node name="manage" expanded="True">
+                  <Node name="assets" expanded="True">
+                    <Node name="js" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

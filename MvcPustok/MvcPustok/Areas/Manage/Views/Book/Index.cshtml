@@ -1,0 +1,127 @@
+﻿@model PaginatedList<Book>
+@{
+	ViewData["Title"] = "Index";
+	int order = (Model.PageIndex - 1) * Model.PageSize;
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+	<!-- Page Heading -->
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Books</h1>
+		<a asp-action="create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			Create
+		</a>
+	</div>
+	<div class="row">
+		<div class="col-md-12 mx-auto">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Name</th>
+						<th scope="col">Author</th>
+						<th scope="col">Genre</th>
+						<th scope="col">SalePrice</th>
+						<th scope="col">CostPrice</th>
+						<th scope="col">Discount</th>
+						<th scope="col">Book's Tags</th>
+						<th scope="col">Poster</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.Items) {
+						<tr>
+							<th scope="row">@(++order)</th>
+							<td>@item.Name</td>
+							<td>@item.Author?.Fullname</td>
+							<td>@item.Genre?.Name</td>
+							<td>@item.SalePrice.ToString("0.00")</td>
+							<td>@item.CostPrice.ToString("0.00")</td>
+							<td>@item.DiscountPercent.ToString("0.##")%</td>
+							<td>
+								<ul class="tag-list" style="padding-left: 0;">
+									@foreach (var bookTag in item.BookTags) {
+										<li style="list-style: none;">@bookTag.Tag?.Name</li>
+									}
+								</ul>
+							</td>
+							<td class="bookImageField">
+								<img id="posterImageFieldId" style="display: inline-block;" width="120" height="120" src="~/uploads/book/@(item.BookImages.First(x => x.Status == true)?.Name)" alt="@(item.Name) poster" />
+								<img id="hoverImageFieldId" style="display: none;" width="120" height="120" src="~/uploads/book/@(item.BookImages.First(x => x.Status == false)?.Name)" alt="@(item.Name) hover" />
+							</td>
+							<td align="center" class="d-flex flex-column justify-content-between align-items-center">
+								<div class="mb-3" style="width: 80%;">
+									<a style="width: 100%" class="btn btn-warning" asp-action="edit" asp-route-id="@item.Id">Edit</a>
+								</div>
+								<div class="mb-3" style="width: 80%;">
+									<a style="width: 100%" class="btn btn-danger delete-btn" asp-action="delete" asp-route-id="@item.Id">Delete</a>
+								</div>
+								<div style="width: 80%;">
+									<a style="width: 100%" class="btn btn-primary" asp-action="reviews" asp-route-id="@item.Id">Reviews</a>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			<nav aria-label="Pagination" class="d-flex justify-content-center">
+				<ul class="pagination">
+					@if (Model.PageIndex > 1) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@(Model.PageIndex - 1)">Previous</a>
+						</li>
+					}
+
+					@if (Model.PageIndex > 3) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="1">1</a>
+						</li>
+						@if (Model.PageIndex > 4) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+					}
+
+					@for (int i = Math.Max(1, Model.PageIndex - 2); i <= Math.Min(Model.TotalPages, Model.PageIndex + 2); i++) {
+						if (Model.PageIndex == i) {
+							<li class="page-item active" aria-current="page">
+								<span class="page-link">@i</span>
+							</li>
+						}
+						else {
+							<li class="page-item">
+								<a class="page-link" asp-route-page="@i">@i</a>
+							</li>
+						}
+					}
+
+					@if (Model.PageIndex < Model.TotalPages - 2) {
+						@if (Model.PageIndex < Model.TotalPages - 3) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@Model.TotalPages">@Model.TotalPages</a>
+						</li>
+					}
+
+					@if (Model.PageIndex < Model.TotalPages) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@(Model.PageIndex + 1)">Next</a>
+						</li>
+					}
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+</div>
+
+@section scripts {
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}

@@ -1,0 +1,22 @@
+﻿@model OrderCreateViewModel
+
+<form method="post" id="orderForm">
+	<div class="row">
+		<div class="col-md-12 col-12 mb--20">
+			<label>Phone no*</label>
+			<input asp-for="Phone" placeholder="Phone number">
+			<span class="text-danger" asp-validation-for="Phone"></span>
+		</div>
+		<div class="col-12 mb--20">
+			<label>Address*</label>
+			<input asp-for=Address placeholder="Address line">
+			<span class="text-danger" asp-validation-for="Address"></span>
+		</div>
+	</div>
+	<div class="order-note-block mt--30">
+		<label for="order-note">Order notes</label>
+		<textarea asp-for=Note id="order-note" cols="30" rows="10" class="order-note"
+							placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+		<span class="text-danger" asp-validation-for="Note"></span>
+	</div>
+</form>

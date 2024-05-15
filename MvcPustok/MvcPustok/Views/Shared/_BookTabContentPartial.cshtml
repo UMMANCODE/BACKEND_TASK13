@@ -1,0 +1,69 @@
+﻿@model List<Book>
+<div class="product-slider multiple-row  slider-border-multiple-row  sb-slick-slider"
+		 data-slick-setting='{
+														"autoplay": true,
+														"autoplaySpeed": 8000,
+														"slidesToShow": 5,
+														"rows":1,
+														"dots":true
+												}' data-slick-responsive='[
+														{"breakpoint":1200, "settings": {"slidesToShow": 3} },
+														{"breakpoint":768, "settings": {"slidesToShow": 2} },
+														{"breakpoint":480, "settings": {"slidesToShow": 1} },
+														{"breakpoint":320, "settings": {"slidesToShow": 1} }
+												]'>
+
+	@foreach (var item in Model) {
+		<div class="single-slide">
+			<div class="product-card">
+				<div class="product-header">
+					<a href="#" class="author">
+						@item.Author.Fullname
+					</a>
+					<h3>
+						<a asp-controller="book" asp-action="detail" asp-route-id="@item.Id">
+							@item.Name
+						</a>
+					</h3>
+				</div>
+				<div class="product-card--body">
+					<div class="card-image">
+						<img src="~/image/products/@item.BookImages.FirstOrDefault(x=>x.Status==true)?.Name" alt="">
+						<div class="hover-contents">
+							<a asp-controller="book" asp-action="detail" asp-route-id="@item.Id" class="hover-image">
+								<img src="~/image/products/@item.BookImages.FirstOrDefault(x=>x.Status==false)?.Name" alt="">
+							</a>
+							<div class="hover-btns">
+								<a asp-controller="book" asp-action="addtobasket" asp-route-bookId="@item.Id" class="single-btn">
+									<i class="fas fa-shopping-basket"></i>
+								</a>
+								<a href="wishlist.html" class="single-btn">
+									<i class="fas fa-heart"></i>
+								</a>
+								<a href="compare.html" class="single-btn">
+									<i class="fas fa-random"></i>
+								</a>
+								<a asp-controller="book" asp-action="getbookbyid" asp-route-id="@item.Id"
+									 class="single-btn book-modal">
+									<i class="fas fa-eye"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="price-block">
+						@if (item.DiscountPercent > 0) {
+
+							<span class="price">£@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</span>
+							<del class="price-old">£@item.SalePrice.ToString("0.00")</del>
+							<span class="price-discount">@item.DiscountPercent.ToString("0.##")%</span>
+						}
+						else {
+							<span class="price">£@item.SalePrice.ToString("0.00")</span>
+						}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>

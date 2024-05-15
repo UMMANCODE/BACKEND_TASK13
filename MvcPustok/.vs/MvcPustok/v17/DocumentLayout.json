@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\views\\shared\\_booktabcontentpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\views\\shared\\_booktabcontentpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\views\\shared\\_bookmodalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\views\\shared\\_bookmodalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\views\\book\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\views\\book\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\countservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\countservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|c:\\users\\ummanmm\\desktop\\backend_task11\\mvcpustok\\mvcpustok\\countmanageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838B4C8E-E59C-4E24-B508-A0358A019A2B}|MvcPustok\\MvcPustok.csproj|solutionrelative:mvcpustok\\countmanageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MvcPustok\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MvcPustok\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T14:16:37.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_BookTabContentPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_BookTabContentPartial.cshtml",
+              "RelativeDocumentMoniker": "MvcPustok\\Views\\Shared\\_BookTabContentPartial.cshtml",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_BookTabContentPartial.cshtml",
+              "RelativeToolTip": "MvcPustok\\Views\\Shared\\_BookTabContentPartial.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAABMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T14:16:02.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_BookModalPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_BookModalPartial.cshtml",
+              "RelativeDocumentMoniker": "MvcPustok\\Views\\Shared\\_BookModalPartial.cshtml",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Shared\\_BookModalPartial.cshtml",
+              "RelativeToolTip": "MvcPustok\\Views\\Shared\\_BookModalPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T14:15:03.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MvcPustok\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MvcPustok\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:13:30.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MemberController.cs",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\MemberController.cs",
+              "RelativeDocumentMoniker": "MvcPustok\\Controllers\\MemberController.cs",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\MemberController.cs",
+              "RelativeToolTip": "MvcPustok\\Controllers\\MemberController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:12:00.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "MvcPustok\\Controllers\\BookController.cs",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Controllers\\BookController.cs",
+              "RelativeToolTip": "MvcPustok\\Controllers\\BookController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:10:45.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CountService.cs",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\CountService.cs",
+              "RelativeDocumentMoniker": "MvcPustok\\CountService.cs",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\CountService.cs",
+              "RelativeToolTip": "MvcPustok\\CountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:08:44.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CountManageService.cs",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\CountManageService.cs",
+              "RelativeDocumentMoniker": "MvcPustok\\CountManageService.cs",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\CountManageService.cs",
+              "RelativeToolTip": "MvcPustok\\CountManageService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T14:08:41.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Book\\Details.cshtml",
+              "RelativeDocumentMoniker": "MvcPustok\\Views\\Book\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ummanmm\\Desktop\\BACKEND_TASK11\\MvcPustok\\MvcPustok\\Views\\Book\\Details.cshtml",
+              "RelativeToolTip": "MvcPustok\\Views\\Book\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T14:08:16.812Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿@model Genre
+@{
+	ViewData["Title"] = "Create";
+}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+	<!-- Page Heading -->
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Genres</h1>
+		<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			Create
+		</a>
+	</div>
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<form class="user" asp-action="create" method="post">
+				<div class="form-group">
+					<label for="nameInput">Name</label>
+					<input asp-for="Name" class="form-control" id="nameInput" placeholder="">
+					<span class="text-danger" asp-validation-for="Name"></span>
+				</div>
+				<button class="btn btn-primary" type="submit">
+					Create Genre
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+@section scripts {
+	@Html.PartialAsync("_ValidationScriptPartials");
+}

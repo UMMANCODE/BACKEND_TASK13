@@ -1,0 +1,102 @@
+﻿@model PaginatedList<Slider>
+@{
+	ViewData["Title"] = "Index";
+	int order = (Model.PageIndex - 1) * Model.PageSize;
+}
+<div class="container-fluid">
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Sliders</h1>
+		<a asp-action="create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+			Create
+		</a>
+	</div>
+	<div class="row">
+		<div class="col-md-12 mx-auto">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Title 1</th>
+						<th scope="col">Title 2</th>
+						<th scope="col">BtnUrl</th>
+						<th scope="col">BtnText</th>
+						<th scope="col">Image</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.Items) {
+						<tr>
+							<th scope="row">@(++order)</th>
+							<td>@item.Title1</td>
+							<td>@item.Title2</td>
+							<td>@item.BtnUrl</td>
+							<td>@item.BtnText</td>
+							<td>
+								<img width="150" src="~/uploads/slider/@(item.ImageName)" alt="@item.Title1" />
+							</td>
+							<td>
+								<a class="btn btn-warning" asp-action="edit" asp-route-id="@item.Id">Edit</a>
+								<a class="btn btn-danger delete-btn" asp-action="delete" asp-route-id="@item.Id">Delete</a>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			<nav aria-label="Pagination" class="d-flex justify-content-center">
+				<ul class="pagination">
+					@if (Model.PageIndex > 1) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@(Model.PageIndex - 1)">Previous</a>
+						</li>
+					}
+
+					@if (Model.PageIndex > 3) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="1">1</a>
+						</li>
+						@if (Model.PageIndex > 4) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+					}
+
+					@for (int i = Math.Max(1, Model.PageIndex - 2); i <= Math.Min(Model.TotalPages, Model.PageIndex + 2); i++) {
+						if (Model.PageIndex == i) {
+							<li class="page-item active" aria-current="page">
+								<span class="page-link">@i</span>
+							</li>
+						}
+						else {
+							<li class="page-item">
+								<a class="page-link" asp-route-page="@i">@i</a>
+							</li>
+						}
+					}
+
+					@if (Model.PageIndex < Model.TotalPages - 2) {
+						@if (Model.PageIndex < Model.TotalPages - 3) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@Model.TotalPages">@Model.TotalPages</a>
+						</li>
+					}
+
+					@if (Model.PageIndex < Model.TotalPages) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@(Model.PageIndex + 1)">Next</a>
+						</li>
+					}
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
+@section scripts {
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}

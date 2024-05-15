@@ -1,0 +1,97 @@
+﻿@model PaginatedList<BookReview>
+@{
+	ViewData["Title"] = "Reviews";
+	int order = (Model.PageIndex - 1) * Model.PageSize;
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 mx-auto">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Reviewer</th>
+						<th scope="col">Rating</th>
+						<th scope="col">Review</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.Items) {
+						<tr>
+							<th scope="row">@(++order)</th>
+							<td>@item.AppUser.UserName</td>
+							<td>@item.Rate</td>
+							<td>@item.Text</td>
+							<td align="center" class="d-flex flex-column justify-content-between align-items-center">
+								<div class="mb-3" style="width: 80%;">
+									<a style="width: 100%" class="btn btn-success" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status=1>Accept</a>
+								</div>
+								<div style="width: 80%;">
+									<a style="width: 100%" class="btn btn-danger" asp-action="ChangeStatus" asp-route-id="@item.Id" asp-route-status=-1>Reject</a>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			<nav aria-label="Pagination" class="d-flex justify-content-center">
+				<ul class="pagination">
+					@if (Model.PageIndex > 1) {
+						<li class="page-item">
+							<a class="page-link" asp-action="reviews" asp-route-id="@ViewBag.BookId" asp-route-page="@(Model.PageIndex - 1)">Previous</a>
+						</li>
+					}
+
+					@if (Model.PageIndex > 3) {
+						<li class="page-item">
+							<a class="page-link" asp-action="reviews" asp-route-page="1">1</a>
+						</li>
+						@if (Model.PageIndex > 4) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+					}
+
+					@for (int i = Math.Max(1, Model.PageIndex - 2); i <= Math.Min(Model.TotalPages, Model.PageIndex + 2); i++) {
+						if (Model.PageIndex == i) {
+							<li class="page-item active" aria-current="page">
+								<span class="page-link">@i</span>
+							</li>
+						}
+						else {
+							<li class="page-item">
+								<a class="page-link" asp-route-page="@i">@i</a>
+							</li>
+						}
+					}
+
+					@if (Model.PageIndex < Model.TotalPages - 2) {
+						@if (Model.PageIndex < Model.TotalPages - 3) {
+							<li class="page-item disabled">
+								<span class="page-link">...</span>
+							</li>
+						}
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@Model.TotalPages">@Model.TotalPages</a>
+						</li>
+					}
+
+					@if (Model.PageIndex < Model.TotalPages) {
+						<li class="page-item">
+							<a class="page-link" asp-route-page="@(Model.PageIndex + 1)">Next</a>
+						</li>
+					}
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+</div>
+
+@section scripts {
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+}
