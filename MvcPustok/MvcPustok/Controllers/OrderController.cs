@@ -58,10 +58,11 @@ namespace MvcPustok.Controllers {
 			}).ToList();
 
 			_context.Orders.Add(order);
+			_context.BasketItems.RemoveRange(_context.BasketItems.Where(x => x.AppUserId == user.Id));
 			_context.SaveChanges();
 
 
-			return RedirectToAction("profile", "account", new { tab = "orders" });
+			return RedirectToAction("profile", "member", new { tab = "orders" });
 		}
 
 		private BasketViewModel GetBasket() {
@@ -110,20 +111,32 @@ namespace MvcPustok.Controllers {
 			return vm;
 		}
 
-		private List<OrderItemViewModel> GetOrderBasket(string userId) {
+		[Authorize(Roles = "member")]
+		public async Task<IActionResult> GetOrderItems(int orderId) {
+			AppUser user = await _userManager.GetUserAsync(User);
 
-			List<OrderItemViewModel> items = new();
+			Order order = _context.Orders
+				.Include(x => x.OrderItems)
+				.ThenInclude(oi => oi.Book)
+				.FirstOrDefault(x => x.Id == orderId && x.AppUserId == user.Id);
 
-			var basketItems = _context.BasketItems
-		 .Include(x => x.Book)
-		 .Where(x => x.AppUserId == userId)
-		 .ToList();
+			if (order == null) return RedirectToAction("notfound", "error");
 
-			items = basketItems.Select(x => new OrderItemViewModel {
-				BookId = x.BookId,
-				Count = x.Count
-			}).ToList();
-			return items;
+			return PartialView("_OrderModalContentPartial", order.OrderItems);
+		}
+
+		[Authorize(Roles = "member")]
+		public async Task<IActionResult> Cancel(int id) {
+			AppUser user = await _userManager.GetUserAsync(User);
+
+			Order order = _context.Orders
+				.FirstOrDefault(x => x.Id == id && x.AppUserId == user.Id && x.Status == Models.Enums.OrderStatus.Pending);
+
+			if (order == null) return RedirectToAction("notfound", "error");
+
+			order.Status = Models.Enums.OrderStatus.Cancelled;
+			_context.SaveChanges();
+			return RedirectToAction("profile", "member", new { tab = "orders" });
 		}
 	}
 }

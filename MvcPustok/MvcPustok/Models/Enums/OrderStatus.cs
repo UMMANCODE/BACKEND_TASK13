@@ -3,6 +3,7 @@
 		Pending,
 		Accepted,
 		Rejected,
-		Completed
+		Completed,
+		Cancelled
 	}
 }

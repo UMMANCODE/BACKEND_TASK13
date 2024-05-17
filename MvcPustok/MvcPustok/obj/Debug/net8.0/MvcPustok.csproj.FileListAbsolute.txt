@@ -541,3 +541,4 @@ C:\Users\user\Desktop\Code Academy\BACKEND\TASK13\MvcPustok\MvcPustok\obj\Debug\
 C:\Users\user\Desktop\Code Academy\BACKEND\TASK13\MvcPustok\MvcPustok\obj\Debug\net8.0\MvcPustok.pdb
 C:\Users\user\Desktop\Code Academy\BACKEND\TASK13\MvcPustok\MvcPustok\obj\Debug\net8.0\MvcPustok.genruntimeconfig.cache
 C:\Users\user\Desktop\Code Academy\BACKEND\TASK13\MvcPustok\MvcPustok\obj\Debug\net8.0\ref\MvcPustok.dll
+C:\Users\user\Desktop\Code Academy\BACKEND\TASK13\MvcPustok\MvcPustok\obj\Debug\net8.0\MvcPustok.sourcelink.json

@@ -1,7 +1,8 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MvcPustok.Data;
 using MvcPustok.Models;
 using MvcPustok.ViewModels;
 
@@ -9,16 +10,18 @@ namespace MvcPustok.Controllers {
 	[Authorize(Roles = "member")]
 	public class MemberController : Controller {
 
+		private readonly AppDbContext _context;
 		private readonly UserManager<AppUser> _userManager;
 		private readonly SignInManager<AppUser> _signInManager;
 
-		public MemberController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager) {
+		public MemberController(AppDbContext context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager) {
 			_userManager = userManager;
 			_signInManager = signInManager;
+			_context = context;
 		}
 
-        [Authorize(Roles = "member")]
-        public async Task<IActionResult> Profile(string tab = "dashboard") {
+		[Authorize(Roles = "member")]
+		public async Task<IActionResult> Profile(string tab = "dashboard") {
 			AppUser? user = await _userManager.GetUserAsync(User);
 
 			if (user == null)
@@ -29,7 +32,11 @@ namespace MvcPustok.Controllers {
 					FullName = user.FullName,
 					Email = user.Email,
 					UserName = user.UserName
-				}
+				},
+				Orders = _context.Orders.Include(x => x.OrderItems)
+				.ThenInclude(oi => oi.Book)
+				.OrderByDescending(x => x.CreatedAt)
+				.Where(x => x.AppUserId == user.Id).ToList()
 			};
 
 			ViewBag.Tab = tab;

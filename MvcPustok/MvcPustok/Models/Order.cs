@@ -16,7 +16,7 @@ namespace MvcPustok.Models {
 		public string Address { get; set; }
 		[MaxLength(500)]
 		public string? Note { get; set; }
-		public DateTime? CreatedAt { get; set; } = DateTime.UtcNow;
+		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 		public DateTime? ModifiedAt { get; set; }
 		public OrderStatus Status { get; set; }
 		public AppUser? AppUser { get; set; }

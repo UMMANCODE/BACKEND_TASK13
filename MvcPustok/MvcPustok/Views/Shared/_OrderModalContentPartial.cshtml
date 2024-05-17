@@ -1,0 +1,36 @@
+﻿@model List<OrderItem>
+@{
+	var order = 0;
+}
+<div class="modal-content">
+	<button type="button" class="close modal-close-btn ml-auto" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	<div class="myaccount-content">
+		<h3>Order Items</h3>
+		<div class="myaccount-table table-responsive text-center">
+			<table class="table table-bordered">
+				<thead class="thead-light">
+					<tr>
+						<th>No</th>
+						<th>Name</th>
+						<th>Count</th>
+						<th>Unit Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model) {
+						order++;
+						<tr>
+							<td>@order</td>
+							<td>@item.Book.Name</td>
+							<td>@item.Count</td>
+							<td>@((item.DiscountPercent > 0 ? item.SalePrice * (100 - item.DiscountPercent) / 100 : item.SalePrice).ToString("0.00"))</td>
+						</tr>
+					}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

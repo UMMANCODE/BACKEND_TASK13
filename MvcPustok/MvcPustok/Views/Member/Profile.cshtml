@@ -1,6 +1,8 @@
-﻿@model ProfileViewModel
+﻿@using MvcPustok.Models.Enums
+@model ProfileViewModel
 @{
 	ViewData["Title"] = "Profile";
+	int order = 0;
 }
 <section class="breadcrumb-section">
 	<h2 class="sr-only">Site Breadcrumb</h2>
@@ -33,7 +35,7 @@
 								<i class="fa fa-user"></i> Account
 								Details
 							</a>
-							<a asp-action="logout" asp-controller="auth" ><i class="fas fa-sign-out-alt"></i> Logout</a>
+							<a asp-action="logout" asp-controller="auth"><i class="fas fa-sign-out-alt"></i> Logout</a>
 						</div>
 					</div>
 					<!-- My Account Tab Menu End -->
@@ -64,7 +66,7 @@
 							</div>
 							<!-- Single Tab Content End -->
 							<!-- Single Tab Content Start -->
-							<div class='tab-pane fade @(ViewBag.Tab=="orders"?"show active":"")' id="orders" role="tabpanel">
+							<div class="tab-pane fade @(ViewBag.Tab=="orders"?"show active":"")" " id="orders" role="tabpanel">
 								<div class="myaccount-content">
 									<h3>Orders</h3>
 									<div class="myaccount-table table-responsive text-center">
@@ -72,40 +74,42 @@
 											<thead class="thead-light">
 												<tr>
 													<th>No</th>
-													<th>Name</th>
 													<th>Date</th>
 													<th>Status</th>
-													<th>Total</th>
+													<th>Total Products</th>
+													<th>Total Amount</th>
 													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
+											@foreach (var item in Model.Orders) {
+												order++;
 												<tr>
-													<td>1</td>
-													<td>Mostarizing Oil</td>
-													<td>Aug 22, 2018</td>
-													<td>Pending</td>
-													<td>$45</td>
-													<td><a href="cart.html" class="btn">View</a></td>
+													<td>@order</td>
+													<td>@((item.CreatedAt).ToString("yyyy-MM-dd hh:mm"))</td>
+													<td>@item.Status</td>
+													<td><a>@item.OrderItems.Count</a></td>
+													<td>$@item.OrderItems.Sum(oi => oi.Count * (oi.DiscountPercent > 0 ? (oi.SalePrice * (100 - oi.DiscountPercent) / 100) : oi.SalePrice)).ToString("0.00")</td>
+													<td>
+														<a href="@Url.Action("getorderitems","order",new{orderId=item.Id})" style="padding:0 8px" class="btn order-detail-view">View</a>
+														@if (item.Status == OrderStatus.Pending) {
+															<span>|</span> <a style="padding:0 8px" href="@Url.Action("cancel","order",new{id=item.Id})" class="btn">Cancel</a>
+														}
+													</td>
 												</tr>
-												<tr>
-													<td>2</td>
-													<td>Katopeno Altuni</td>
-													<td>July 22, 2018</td>
-													<td>Approved</td>
-													<td>$100</td>
-													<td><a href="cart.html" class="btn">View</a></td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Murikhete Paris</td>
-													<td>June 12, 2017</td>
-													<td>On Hold</td>
-													<td>$99</td>
-													<td><a href="cart.html" class="btn">View</a></td>
-												</tr>
+											}
 											</tbody>
 										</table>
+									</div>
+								</div>
+							</div>
+							<!-- Single Tab Content End -->
+							<!-- Single Tab Content Start -->
+							<div class="tab-pane fade @(ViewBag.Tab == "profile" ? "show active" : "")" " id="account-info" role="tabpanel">
+								<div class="myaccount-content">
+									<h3>Account Details</h3>
+									<div class="account-details-form">
+										@Html.Partial("_ProfileEditFormPartial", Model.ProfileEditVM)
 									</div>
 								</div>
 							</div>
@@ -127,6 +131,8 @@
 		</div>
 	</div>
 </div>
+<!-- Modal -->
+@Html.Partial("_OrderModalPartial")
 
 @section scripts {
 	@Html.Partial("_ValidationScriptPartials");
